@@ -27,6 +27,11 @@ dependencies = [
     "ppt-common>=1.0.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/back1992/ppt-tools"
+Repository = "https://github.com/back1992/ppt-tools"
+Issues = "https://github.com/back1992/ppt-tools/issues"
+
 [project.optional-dependencies]
 llm = [
     "openai>=1.0.0",
