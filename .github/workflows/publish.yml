@@ -28,6 +28,7 @@ jobs:
       - name: Install test deps and run package tests
         run: |
           python -m pip install --upgrade pip pytest pytest-asyncio pymupdf openai httpx
+          python -m pip install ./ppt-common
           python -m pytest ppt-common/tests -q
       - name: Build
         run: |
