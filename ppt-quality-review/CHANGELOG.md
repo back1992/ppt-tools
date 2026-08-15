@@ -4,6 +4,14 @@ All notable changes to `ppt-quality-review` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/);
 versioning follows [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-08-15
+
+### Changed
+
+- Added `project.urls` metadata (Homepage / Repository / Issues) pointing
+  at the public tools repository `back1992/ppt-tools`. No functional
+  changes.
+
 ## [1.0.0] - 2026-08-14
 
 First public release. Previously an internal package, extracted from a

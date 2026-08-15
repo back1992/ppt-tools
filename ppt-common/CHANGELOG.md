@@ -15,6 +15,19 @@ versioning follows [Semantic Versioning](https://semver.org/).
   (~18 min -> ~6 min per failed call at `timeout=180`). Retry policy is
   owned by `_complete`.
 
+## [1.0.1] - 2026-08-15
+
+### Changed
+
+- Added `project.urls` metadata (Homepage / Repository / Issues) pointing
+  at the public tools repository `back1992/ppt-tools`. No functional
+  changes.
+
+### Note
+
+- The `LLMClient` `max_retries=0` fix listed under [Unreleased] was
+  already included in the 1.0.0 release artifacts.
+
 ## [1.0.0] - 2026-08-14
 
 First public release. Previously an internal package, in production use
