@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppt-common"
+version = "1.0.0"
+description = "Shared utilities for slide-deck generation packages: CJK text handling, PDF line merging, LLM client"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["ppt", "cjk", "text-metrics", "llm", "pdf", "utilities"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+llm = [
+    "openai>=1.0,<3.0",
+    "httpx[socks]>=0.25,<1.0",
+]
+agents = [
+    "pydantic-ai>=2.0,<3.0",
+    "openai>=1.0,<3.0",
+    "httpx[socks]>=0.25,<1.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+]
+
+[tool.setuptools.packages.find]
+include = ["ppt_common*"]
+
+[tool.mutmut]
+# Periodic mutation audit pilot (added 2026-08-05). Run from this directory:
+#   mutmut run   (then: mutmut results / mutmut show <id>)
+source_paths = ["ppt_common/text_metrics.py", "ppt_common/text.py"]
+use_git_change_detection = false
+pytest_add_cli_args_test_selection = ["tests/test_text_metrics.py", "tests/test_text.py"]
